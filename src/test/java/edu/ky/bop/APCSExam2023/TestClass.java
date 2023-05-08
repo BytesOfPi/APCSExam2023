@@ -22,7 +22,10 @@ public class TestClass
 
     public int testNOL( String msg, int width )
         {
-        return msg.length() / width;
+        int a = msg.length() / width;
+        int b = msg.length() % width;
+        return b > 0 ? a + 1 : a;
+        // return ((msg.length() - 1) / width) + 1;
         // return msg.length() / width;
         // return (msg.length() / width) + 1;
         // return ((msg.length() - 1) / width) + 1;
